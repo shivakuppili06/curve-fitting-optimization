@@ -1,5 +1,3 @@
-# Plot fitted parametric curve against xy_data.csv scatter points
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,7 +9,6 @@ def main():
     opt_res = fit_parameters(pts_x, pts_y)
     theta, M, X = opt_res.x
 
-    # Sample dense t array for smooth visualization
     t_grid = np.linspace(6, 60, 2000)
     curve_x, curve_y = eval_curve(t_grid, theta, M, X)
 
